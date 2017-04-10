@@ -46,7 +46,7 @@ gem 'figaro'
 
 require 'rbconfig'
   if RbConfig::CONFIG['target_os'] =~ /darwin(1[0-3])/i
-    gem 'rb-fsevent', '<= 0.9.4'
+    #gem 'rb-fsevent', '<= 0.9.4'
   end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -57,10 +57,10 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem  'sqlite3'
+  gem 'sqlite3'
+  gem 'rb-fsevent', :require => false
 end
 
   group :production do
